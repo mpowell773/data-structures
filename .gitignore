@@ -1,9 +1,10 @@
 #Root Folder
 *.vs
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
 
 #TestProject
 *TestProject/Debug
-*TestProject/TestProject.sln
-*TestProject/TestProject.vcxproj
-*TestProject/TestProjectvcxproj.filters
-*TestProject/TestProject.vcxproj.user
+
