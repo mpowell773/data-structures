@@ -3,7 +3,7 @@
 
 #TestProject
 *TestProject/Debug
-*TestProject.sln
-*TestProject.vcxproj
-*.TestProjectvcxproj.filters
-*TestProject.vcxproj.user
+*TestProject/TestProject.sln
+*TestProject/TestProject.vcxproj
+*TestProject/TestProjectvcxproj.filters
+*TestProject/TestProject.vcxproj.user
