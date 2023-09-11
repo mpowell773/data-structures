@@ -1,11 +1,14 @@
-// Recursion.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
+#include "BasicRecursiveTypes.h"
 #include <iostream>
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int num {5};
+    BasicRecursiveTypes recursionExample;
+    recursionExample.headRecursion(num);
+
+    return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
