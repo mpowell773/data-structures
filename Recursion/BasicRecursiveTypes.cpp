@@ -65,8 +65,9 @@ void BasicRecursiveTypes::tailRecursion(int num)
 
 void BasicRecursiveTypes::treeRecursion(int num)
 {
-	int stackCounter {0};
-	std::cout << "treeRecursion function start\n"
+	static int stackCounter {0};
+	std::cout << "\n----------------------------\n"
+			  << "treeRecursion function start\n"
 			  << "Stack Counter: " << ++stackCounter 
 			  << '\n';
 
@@ -76,10 +77,10 @@ void BasicRecursiveTypes::treeRecursion(int num)
 		std::cout << "Num: " << num << '\n';
 		treeRecursion(num - 1);
 		treeRecursion(num - 1); // The second call will not initiate until the first call 
-								// has fully completed its recursion
+		// has fully completed its recursion
 	}
 
-	std::cout << "treeRecursion function start\n"
+	std::cout << "treeRecursion function end\n"
 			  << "Stack Counter: " << --stackCounter
-			  << '\n';
+			  << "\n****************************\n\n";
 }
