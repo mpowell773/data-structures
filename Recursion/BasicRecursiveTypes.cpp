@@ -52,7 +52,7 @@ void BasicRecursiveTypes::tailRecursion(int num)
 		tailRecursion(num - 1);
 	}
 
-	std::cout << "Tail recursion function end\n";
+	std::cout << "tailRecursion function end\n";
 }
 
 // TREE RECURSION
@@ -83,4 +83,39 @@ void BasicRecursiveTypes::treeRecursion(int num)
 	std::cout << "treeRecursion function end\n"
 			  << "Stack Counter: " << --stackCounter
 			  << "\n****************************\n\n";
+}
+
+// INDIRECT RECURSION
+/*----------------------------------------------------------------------------
+* Indirect recursion occurs when you have two or more functions calling each other
+* in a circular pattern. See below for example. In this specific scenario, both
+* recusion functions act as tail recursion, so all actions occur during ascension.
+-----------------------------------------------------------------------------*/
+
+void BasicRecursiveTypes::indirectRecursionA(int num)
+{
+	std::cout << "indirectRecursionA function start\n";
+	
+	// The base case to end the recursive function
+	if (num > 1)
+	{
+		std::cout << "Num (fun A): " << num << '\n';
+		indirectRecursionB(num / 2);
+	}
+	
+	std::cout << "indirectRecursionA function end\n";
+}
+
+void BasicRecursiveTypes::indirectRecursionB(int num)
+{
+	std::cout << "indirectRecursionB function start\n";
+
+	// The base case to end the recursive function
+	if (num > 0)
+	{
+		std::cout << "Num (fun B): " << num << '\n';
+		indirectRecursionA(num - 1);
+	}
+
+	std::cout << "indirectRecursionB function end\n";
 }

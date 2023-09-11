@@ -14,6 +14,9 @@ int main()
     recursionExample.tailRecursion(num);
     std::cout << "=====================================\n";
     recursionExample.treeRecursion(num);
+    std::cout << "=====================================\n";
+    num = 20;
+    recursionExample.indirectRecursionA(num);
 
     return 0;
 }
