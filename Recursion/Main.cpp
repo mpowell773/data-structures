@@ -6,7 +6,10 @@ int main()
 {
     int num {5};
     BasicRecursiveTypes recursionExample;
+    
     recursionExample.headRecursion(num);
+    std::cout << "====================";
+    recursionExample.tailRecursion(num);
 
     return 0;
 }
