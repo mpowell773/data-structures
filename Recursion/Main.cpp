@@ -8,7 +8,7 @@ int main()
     BasicRecursiveTypes recursionExample;
     
     recursionExample.headRecursion(num);
-    std::cout << "====================\n";
+    std::cout << "=====================================\n";
     recursionExample.tailRecursion(num);
 
     return 0;
