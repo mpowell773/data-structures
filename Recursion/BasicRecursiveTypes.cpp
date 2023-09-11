@@ -77,7 +77,7 @@ void BasicRecursiveTypes::treeRecursion(int num)
 		std::cout << "Num: " << num << '\n';
 		treeRecursion(num - 1);
 		treeRecursion(num - 1); // The second call will not initiate until the first call 
-		// has fully completed its recursion
+								// has fully completed its recursion
 	}
 
 	std::cout << "treeRecursion function end\n"
