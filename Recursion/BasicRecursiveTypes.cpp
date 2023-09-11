@@ -1,4 +1,3 @@
-
 #include "BasicRecursiveTypes.h"
 #include <iostream>
 
@@ -54,4 +53,33 @@ void BasicRecursiveTypes::tailRecursion(int num)
 	}
 
 	std::cout << "Tail recursion function end\n";
+}
+
+// TREE RECURSION
+/*----------------------------------------------------------------------------
+* Tree recursion occurs when there is more than one call within the recursive function. 
+* This increases the time complexity exponentially. While the time complexity
+* increases, the space complexity continues to be O(n) due to how the stacks are added and removed
+* during the function's processing. See example below:
+-----------------------------------------------------------------------------*/
+
+void BasicRecursiveTypes::treeRecursion(int num)
+{
+	int stackCounter {0};
+	std::cout << "treeRecursion function start\n"
+			  << "Stack Counter: " << ++stackCounter 
+			  << '\n';
+
+	// The base call to end the function
+	if (num > 0)
+	{
+		std::cout << "Num: " << num << '\n';
+		treeRecursion(num - 1);
+		treeRecursion(num - 1); // The second call will not initiate until the first call 
+								// has fully completed its recursion
+	}
+
+	std::cout << "treeRecursion function start\n"
+			  << "Stack Counter: " << --stackCounter
+			  << '\n';
 }
