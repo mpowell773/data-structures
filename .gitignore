@@ -1,14 +1,13 @@
-#Root Folder
 *.vs
 *.sln
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
+*.aps
+*.rc
+*/resource.h
 
-#TestProject
-*TestProject/Debug
+*/Debug
+*/x64
 
-#Recursion
-*Recursion/Debug
-*Recursion/x64
 
