@@ -100,6 +100,7 @@ void BasicRecursiveTypes::indirectRecursionA(int num)
 	if (num > 1)
 	{
 		std::cout << "Num (fun A): " << num << '\n';
+		// Call to other function
 		indirectRecursionB(num / 2);
 	}
 	
@@ -114,8 +115,25 @@ void BasicRecursiveTypes::indirectRecursionB(int num)
 	if (num > 0)
 	{
 		std::cout << "Num (fun B): " << num << '\n';
+		// Call to other function
 		indirectRecursionA(num - 1);
 	}
 
 	std::cout << "indirectRecursionB function end\n";
+}
+
+// NESTED RECURSION
+/*----------------------------------------------------------------------------
+* Nested recursion occurs when you pass the recursive call as a parameter.
+* In this example, the function will always output 91 unless you pass in a value
+* that is greater than 101.
+-----------------------------------------------------------------------------*/
+
+int BasicRecursiveTypes::nestedRecursion(int num)
+{
+	// Base case
+	if (num > 100)
+		return num - 10;
+	return nestedRecursion(nestedRecursion(num + 11)); // The nested recursion will complete 
+								                       // and return an integer before continuing
 }
