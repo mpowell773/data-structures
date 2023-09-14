@@ -28,6 +28,7 @@ int main()
     int nestedNum {45};
     std::cout << "nestedNum: " << recursionExample.nestedRecursion(nestedNum) << '\n';
     std::cout << "=====================================\n";
+    std::cout << "\n\n";
 
     // FIBONACCI EXAMPLES \\
     
@@ -37,9 +38,12 @@ int main()
 
     std::cout << "Iterative version of fibonacci: " << fibonacciExample.iterativeFib(fibNum) << '\n';
     std::cout << "=====================================\n";
+
     std::cout << "Recursive version of fibonacci: " << fibonacciExample.iterativeFib(fibNum) << '\n';
     std::cout << "=====================================\n";
+
     std::cout << "Memoized version of fibonacci: " << fibonacciExample.memoizationFib(fibNum) << '\n';
+    std::cout << "=====================================\n";
 
     return 0;
 }
