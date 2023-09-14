@@ -1,8 +1,12 @@
 #include "BasicRecursiveTypes.h"
+#include "Fibonacci.h"
 #include <iostream>
 
 int main()
 {
+    
+    // BASIC RECURSIVE EXAMPLES \\
+    
     int num {5};
     BasicRecursiveTypes recursionExample;
     
@@ -24,6 +28,12 @@ int main()
     int nestedNum {45};
     std::cout << "nestedNum: " << recursionExample.nestedRecursion(nestedNum) << '\n';
     std::cout << "=====================================\n";
+
+    // FIBONACCI EXAMPLES \\
+    
+    Fibonacci fibonacciExample;
+    
+    std::cout << "Iterative version of fibonacci: " << fibonacciExample.iterativeFib(10) << '\n';
 
     return 0;
 }
