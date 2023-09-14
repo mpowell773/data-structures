@@ -42,7 +42,7 @@ int Fibonacci::recursiveFib(int index)
 	// A classic example of using recursion to solve the Fibonacci sequence.
 	// This version, however, is extremely inefficient due to multiple occurences of the same call.
 	// For example, recursiveFib(5) will have multiple calls for recursiveFib(3) and all the subsequent
-	// calls down to the base case.
+	// calls down to the base case. Time complexity is quadratic.
 	return recursiveFib(index - 1) + recursiveFib(index + 1);
 }
 
