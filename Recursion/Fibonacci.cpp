@@ -46,8 +46,27 @@ int Fibonacci::recursiveFib(int index)
 	return recursiveFib(index - 1) + recursiveFib(index + 1);
 }
 
+// Memoization is the concept where you store the value of a call. Looking at recursiveFib and the comments there, 
+// the goal of using memoization is to not have multiple duplicate calls occuring in the recursion when you already have found
+// the number. 
 int Fibonacci::memoizationFib(int index)
 {
+	if (index < 0)
+		return -1;
 
-	return 0;
+	// Init vector to whatever amount of indexes needed.
+	std::vector<int> fibVec(index, -1);
+
+	if (index <= 1)
+		return index;
+
+	// If the index is -1, the number has not yet been found, so call the recursive function.
+	// As the recursion begins returning itself, the indexes will be filled in fibVec which
+	// will help in subsequent calls.
+	if (fibVec.at(index - 1) == -1)
+		fibVec.at(index - 1) = memoizationFib(index - 1);
+	if (fibVec.at(index - 2) == -1)
+		fibVec.at(index - 2) = memoizationFib(index - 2);
+
+	return fibVec.at(index - 1) + fibVec.at(index - 2);
 }

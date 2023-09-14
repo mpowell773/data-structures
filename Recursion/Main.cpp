@@ -33,7 +33,13 @@ int main()
     
     Fibonacci fibonacciExample;
     
-    std::cout << "Iterative version of fibonacci: " << fibonacciExample.iterativeFib(10) << '\n';
+    int fibNum {10};
+
+    std::cout << "Iterative version of fibonacci: " << fibonacciExample.iterativeFib(fibNum) << '\n';
+    std::cout << "=====================================\n";
+    std::cout << "Recursive version of fibonacci: " << fibonacciExample.iterativeFib(fibNum) << '\n';
+    std::cout << "=====================================\n";
+    std::cout << "Memoized version of fibonacci: " << fibonacciExample.memoizationFib(fibNum) << '\n';
 
     return 0;
 }
