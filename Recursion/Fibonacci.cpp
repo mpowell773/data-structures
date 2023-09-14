@@ -1,5 +1,6 @@
 #include "Fibonacci.h"
 #include <iostream>
+#include <vector>
 
 int Fibonacci::iterativeFib(int index)
 {
@@ -32,11 +33,21 @@ int Fibonacci::iterativeFib(int index)
 
 int Fibonacci::recursiveFib(int index)
 {
+	if (index < 0)
+		return -1;
+	
 	if (index <= 1)
 		return index;
+
+	// A classic example of using recursion to solve the Fibonacci sequence.
+	// This version, however, is extremely inefficient due to multiple occurences of the same call.
+	// For example, recursiveFib(5) will have multiple calls for recursiveFib(3) and all the subsequent
+	// calls down to the base case.
+	return recursiveFib(index - 1) + recursiveFib(index + 1);
 }
 
 int Fibonacci::memoizationFib(int index)
 {
+
 	return 0;
 }
